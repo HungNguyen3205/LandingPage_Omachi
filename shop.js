@@ -86,7 +86,6 @@ for (const thumb of thumbs) {
     document.querySelector('#description-serving').textContent = product.serving;
     document.querySelector('#prep-format').textContent = product.prep;
     updatePrice();
-    document.dispatchEvent(new CustomEvent('omachi-product', { detail: { id: selectedProduct, name } }));
     for (const item of thumbs) item.setAttribute('aria-pressed', String(item === thumb));
   });
 }

@@ -8,7 +8,6 @@
 <title>Mì khoai tây Omachi vị bò hầm</title>
 <link rel="stylesheet" href="styles.css">
 <script src="shop.js" defer></script>
-<script src="reviews.js" defer></script>
 </head>
 <body>
 <header class="top"><div class="bar">
@@ -53,21 +52,15 @@
   </nav>
   <section class="panel reviews" id="binh-luan" aria-labelledby="reviews-title">
     <header class="review-heading">
-      <div><h2 id="reviews-title">Bình luận sản phẩm</h2><p id="review-product">Mì gói Omachi xốt bò hầm</p></div>
-      <strong id="review-count">0 bình luận</strong>
+      <div><h2 id="reviews-title">Bình luận sản phẩm</h2><p>Nội dung minh họa cho ba loại mì Omachi.</p></div>
+      <strong>5 bình luận mẫu</strong>
     </header>
-    <div class="review-layout">
-      <div id="review-list" class="review-list"><p>Chưa có bình luận cho sản phẩm này.</p></div>
-      <form id="review-form" class="review-form">
-        <h3>Viết bình luận</h3>
-        <label for="review-name">Tên hiển thị</label>
-        <input id="review-name" name="displayName" maxlength="40" required>
-        <label for="review-text">Bình luận của bạn</label>
-        <textarea id="review-text" name="message" rows="5" maxlength="800" required></textarea>
-        <button class="accent" type="submit">Gửi bình luận</button>
-        <p class="note">Bình luận hiển thị trên trình duyệt này.</p>
-        <p id="review-status" role="status"></p>
-      </form>
+    <div class="review-list">
+      <article><strong>Mì gói · Pha ở nhà</strong><p>“Mình thích pha mì gói trong tô riêng để dễ thêm rau cải và trứng luộc. Khi khuấy kỹ, xốt bò hầm hòa đều vào nước dùng, ăn cùng chút hành lá rất hợp.”</p></article>
+      <article><strong>Mì tô · Bữa nhẹ ở văn phòng</strong><p>“Tô có sẵn nên mình chỉ cần tìm chỗ có nước sôi. Miệng tô rộng dễ trộn, lúc ăn mình thêm vài lát bò đã nấu chín và một ít tiêu.”</p></article>
+      <article><strong>Mì ly · Để sẵn trong ngăn bàn</strong><p>“Ly gọn, cất ở văn phòng rất tiện. Lúc pha mình đặt ly trên mặt bàn, rót nước theo vạch trên bao bì rồi chờ đủ thời gian trước khi khuấy.”</p></article>
+      <article><strong>Mì gói · Thêm rau và món ăn kèm</strong><p>“Cuối tuần mình thường dùng tô lớn, thêm cải chần và chút ngò gai. Món ăn vẫn có vị xốt bò hầm quen thuộc, thêm rau thì bữa nhẹ dễ ăn hơn.”</p></article>
+      <article><strong>Mì tô và mì ly · Chọn theo chỗ dùng</strong><p>“Mình chọn tô khi muốn có chỗ rộng để thêm đồ ăn kèm. Khi cần để dành một phần trong ngăn tủ nhỏ, mình chọn ly cho gọn.”</p></article>
     </div>
   </section>
   <section class="panel description" id="gioi-thieu" aria-labelledby="description-title">
@@ -79,12 +72,25 @@
     <h3>Bảo quản và thông tin trên nhãn</h3>
     <p>Giữ bao bì nguyên vẹn ở nơi khô ráo, thoáng mát. Kiểm tra hạn dùng, thành phần và thông tin dị ứng in trên bao bì trước khi pha, đặc biệt khi chọn mua để dùng chung.</p>
   </section>
-  <section class="panel" id="cach-pha">
-    <h2>Cách pha và thưởng thức</h2>
-    <ol class="preparation text-steps">
-      <li><strong>Chuẩn bị mì và gia vị</strong><p id="prep-format">Mở gói, cho vắt mì và các gói gia vị vào tô chịu nhiệt theo hướng dẫn trên bao bì.</p></li>
-      <li><strong>Rót nước sôi</strong><p>Dùng lượng nước và thời gian chờ in trên bao bì của loại mì đang chọn.</p></li>
-      <li><strong>Khuấy đều rồi dùng</strong><p>Trộn nhẹ để gia vị tan đều. Cẩn thận khi cầm vật đựng còn nóng.</p></li>
+  <section class="panel format-guide" aria-labelledby="format-guide-title">
+    <h2 id="format-guide-title">Chọn loại mì theo cách bạn muốn pha</h2>
+    <div class="format-grid">
+      <article><img src="assets/omachi-bo-ham.webp" width="640" height="640" loading="lazy" alt="Bao bì mì gói Omachi"><div><h3>Mì gói · 80 g</h3><p>Pha bằng tô chịu nhiệt riêng. Dễ chọn tô lớn nếu muốn thêm rau, trứng hoặc thịt.</p></div></article>
+      <article><img src="assets/omachi-to.webp" width="640" height="640" loading="lazy" alt="Bao bì mì tô Omachi"><div><h3>Mì tô · 92 g</h3><p>Pha theo hướng dẫn ngay trong tô có sẵn. Miệng tô rộng, thuận tiện khi khuấy và thêm đồ ăn kèm.</p></div></article>
+      <article><img src="assets/omachi-ly.webp" width="640" height="640" loading="lazy" alt="Bao bì mì ly Omachi"><div><h3>Mì ly · 68 g</h3><p>Ly cao, gọn, dễ cất trong ngăn bàn. Đặt ly vững trước khi rót nước đến vạch hướng dẫn.</p></div></article>
+    </div>
+  </section>
+  <section class="panel illustrated-guide" id="cach-pha" aria-labelledby="guide-title">
+    <h2 id="guide-title">Hướng dẫn pha mì qua 6 hình</h2>
+    <p id="prep-format">Mở gói, cho vắt mì và các gói gia vị vào tô chịu nhiệt theo hướng dẫn trên bao bì.</p>
+    <p class="note">Bộ ảnh minh họa cách pha mì gói. Với mì tô và mì ly, xem hướng dẫn in trên từng bao bì.</p>
+    <ol class="guide-steps">
+      <li><figure><img src="assets/01.webp" width="512" height="512" loading="lazy" alt="Gói mì Omachi còn nguyên"><figcaption><h3>1. Chuẩn bị trước khi pha</h3><p>Đọc hướng dẫn trên bao bì để biết lượng nước và thời gian chờ. Với mì gói, chuẩn bị một tô chịu nhiệt đủ rộng để đựng vắt mì và nước.</p></figcaption></figure></li>
+      <li><figure><img src="assets/02.webp" width="512" height="512" loading="lazy" alt="Gói mì mở ra, thấy vắt mì bên trong"><figcaption><h3>2. Mở gói, lấy vắt mì và gia vị</h3><p>Xé theo mép bao bì. Lấy vắt mì và các gói gia vị ra trước khi rót nước để thao tác thuận tiện hơn.</p></figcaption></figure></li>
+      <li><figure><img src="assets/03.webp" width="512" height="512" loading="lazy" alt="Vắt mì khô được đặt vào tô"><figcaption><h3>3. Đặt vắt mì vào tô</h3><p>Đặt vắt mì nằm gọn trong tô. Thêm các gói gia vị theo thứ tự in trên nhãn. Với mì tô hoặc mì ly, dùng vật đựng đi kèm theo hướng dẫn.</p></figcaption></figure></li>
+      <li><figure><img src="assets/04.webp" width="512" height="512" loading="lazy" alt="Rót nước sôi vào tô mì"><figcaption><h3>4. Rót nước sôi và đậy lại</h3><p>Đặt tô hoặc ly trên mặt phẳng chắc chắn. Rót đúng lượng nước hoặc đến vạch trên bao bì, rồi đậy và chờ đủ thời gian ghi trên nhãn.</p></figcaption></figure></li>
+      <li><figure><img src="assets/05.webp" width="512" height="512" loading="lazy" alt="Ảnh minh họa xốt Omachi hòa trong tô mì"><figcaption><h3>5. Khuấy đều để xốt hòa vào nước dùng</h3><p>Khi mì đã mềm, mở nắp cẩn thận vì có hơi nóng. Dùng đũa đảo nhẹ và khuấy từ đáy tô để gia vị tan đều.</p></figcaption></figure></li>
+      <li><figure><img src="assets/06.webp" width="512" height="512" loading="lazy" alt="Tô mì hoàn chỉnh với thịt bò, hành lá và ớt"><figcaption><h3>6. Thêm món ăn kèm và thưởng thức</h3><p>Thêm hành lá, rau cải chần hoặc vài lát thịt bò đã nấu chín. Ai thích vị cay có thể thêm một ít ớt cắt lát.</p></figcaption></figure></li>
     </ol>
   </section>
   <section class="panel" id="hoi-dap">
