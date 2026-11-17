@@ -30,11 +30,13 @@ h1, h2 { line-height: 1.2; margin: 0; }
 main { padding: 1.25rem 1rem 0; }
 .product { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .gallery, .details, .panel, .section-nav { background: white; border: 1px solid var(--line); border-radius: .9rem; overflow: hidden; }
-.hero { display: block; width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; }
-.thumbnails { display: flex; gap: .6rem; padding: .65rem 1rem; }
-.thumbnails button { background: transparent; padding: 2px; border: 2px solid transparent; border-radius: .55rem; }
-.thumbnails button[aria-pressed="true"] { border-color: var(--accent); }
-.thumbnails img { display: block; border-radius: .3rem; width: 54px; height: 54px; }
+.hero { display: block; width: 100%; aspect-ratio: 1; height: auto; object-fit: contain; background: #faf8f8; }
+.flavor-label { margin: 0; padding: .85rem 1rem 0; color: var(--ink); font-weight: 700; }
+.thumbnails { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; padding: .55rem 1rem 1rem; }
+.thumbnails button { background: #faf8f8; padding: .35rem; border: 1px solid var(--line); border-radius: .55rem; color: var(--ink); font-size: .78rem; line-height: 1.2; }
+.thumbnails button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-dark); background: var(--tint); font-weight: 700; }
+.thumbnails img { display: block; width: 100%; max-width: 92px; height: auto; margin: 0 auto .3rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .price-banner { background: linear-gradient(110deg,#af123d,#d0234f); color: white; padding: 1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .price-banner strong { display: block; font-size: clamp(1.9rem,5vw,2.5rem); line-height: 1.1; }
 .price-banner span { font-size: .82rem; font-weight: 700; }

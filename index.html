@@ -17,19 +17,20 @@
 <main>
   <section class="product" aria-labelledby="product-title">
     <div class="gallery">
-      <img id="hero" class="hero" src="assets/01.webp" alt="Gói mì khoai tây Omachi vị bò hầm" width="512" height="512" fetchpriority="high">
-      <div class="thumbnails" aria-label="Ảnh sản phẩm">
-        <button type="button" aria-label="Gói mì" aria-pressed="true" data-image="01"><img src="assets/01.webp" alt="" width="72" height="72"></button>
-        <button type="button" aria-label="Gói mì đã mở" aria-pressed="false" data-image="02"><img src="assets/02.webp" alt="" width="72" height="72"></button>
-        <button type="button" aria-label="Tô mì hoàn chỉnh" aria-pressed="false" data-image="06"><img src="assets/06.webp" alt="" width="72" height="72"></button>
+      <img id="hero" class="hero" src="assets/omachi-bo-ham.webp" alt="Bao bì Omachi xốt bò hầm 80 g" width="640" height="640" fetchpriority="high">
+      <p class="flavor-label">Chọn vị mì</p>
+      <div class="thumbnails" aria-label="Chọn vị mì Omachi">
+        <button type="button" aria-pressed="true" data-product="beef"><img src="assets/omachi-bo-ham.webp" alt="" width="80" height="80"><span>Xốt bò hầm</span></button>
+        <button type="button" aria-pressed="false" data-product="shrimp"><img src="assets/omachi-tom-chua-cay.webp" alt="" width="80" height="80"><span>Tôm chua cay</span></button>
+        <button type="button" aria-pressed="false" data-product="rib"><img src="assets/omachi-suon-ngu-qua.webp" alt="" width="80" height="80"><span>Sườn hầm ngũ quả</span></button>
       </div>
     </div>
     <div class="details">
-      <div class="price-banner"><div><span>Giá tham khảo</span><strong id="price">9.000 ₫</strong></div><span class="flavor">BÒ HẦM</span></div>
+      <div class="price-banner"><div><span>Giá tham khảo</span><strong id="price">9.000 ₫</strong></div><span class="flavor" id="flavor-badge">XỐT BÒ HẦM</span></div>
       <div class="product-copy">
         <div class="tag">MÌ KHOAI TÂY</div>
-        <h1 id="product-title">Mì Omachi vị bò hầm</h1>
-        <p>Sợi mì vàng óng, nước dùng đậm vị bò hầm. Thêm chút hành lá và vài lát ớt để tô mì tròn vị.</p>
+        <h1 id="product-title">Mì Omachi xốt bò hầm</h1>
+        <p id="product-description">Sợi mì khoai tây và trứng kết hợp cùng xốt bò hầm đậm vị.</p>
         <fieldset>
           <legend>Chọn quy cách</legend>
           <label><input type="radio" name="pack" value="single" checked><span>1 gói</span></label>
@@ -37,9 +38,12 @@
           <label><input type="radio" name="pack" value="box"><span>Thùng 30 gói</span></label>
         </fieldset>
         <dl class="facts">
-          <div><dt>Hương vị</dt><dd>Bò hầm</dd></div>
+          <div><dt>Hương vị</dt><dd id="product-flavor">Xốt bò hầm</dd></div>
+          <div><dt>Khối lượng mỗi gói</dt><dd id="product-weight">80 g</dd></div>
           <div><dt>Cách pha</dt><dd><a href="#cach-pha">Xem hướng dẫn ↓</a></dd></div>
         </dl>
+        <p class="note"><a id="product-source" href="https://minhcaumart.vn/san-pham/thuc-pham-che-bien/mi-an-lien/mi-dinh-duong-omachi-xot-bo-ham-80g.html?location=-1">Nguồn ảnh bao bì</a></p>
+        <p class="sr-only" id="product-status" role="status"></p>
       </div>
     </div>
   </section>
@@ -47,7 +51,7 @@
     <a href="#gioi-thieu">Giới thiệu</a><a href="#cach-pha">Cách thưởng thức</a><a href="#hoi-dap">Hỏi đáp</a>
   </nav>
   <section class="panel intro" id="gioi-thieu">
-    <div><h2>Đậm vị bò hầm</h2><p>Mì khoai tây Omachi kết hợp với nước dùng vị bò hầm. Bạn có thể thêm rau, thịt bò đã nấu chín hoặc trứng để có tô mì theo ý thích.</p></div>
+    <div><h2>Mì khoai tây Omachi</h2><p>Chọn vị mì ở đầu trang để xem thông tin trên từng bao bì. Bạn có thể thêm rau, trứng hoặc món ăn kèm theo ý thích.</p></div>
     <img src="assets/06.webp" alt="Tô mì với thịt bò, hành lá và ớt" loading="lazy" width="512" height="512">
   </section>
   <section class="panel" id="cach-pha">
@@ -63,7 +67,7 @@
     <details><summary>Có những quy cách nào?</summary><p>Có lựa chọn 1 gói, combo 5 gói và thùng 30 gói trên trang.</p></details>
     <details><summary>Giá trên trang được tính thế nào?</summary><p>Giá hiển thị là giá minh họa theo quy cách đang chọn.</p></details>
   </section>
-  <footer>Omachi · Hình ảnh và giá minh họa</footer>
+  <footer>Omachi · Giá tham khảo</footer>
 </main>
 <div class="purchase"><div class="bar">
   <div class="purchase-price"><small>Giá tham khảo</small><strong id="bar-price">9.000 ₫</strong></div>
