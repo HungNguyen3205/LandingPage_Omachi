@@ -8,6 +8,7 @@
 <title>Mì khoai tây Omachi vị bò hầm</title>
 <link rel="stylesheet" href="styles.css">
 <script src="shop.js" defer></script>
+<script src="reviews.js" defer></script>
 </head>
 <body>
 <header class="top"><div class="bar">
@@ -18,28 +19,28 @@
   <section class="product" aria-labelledby="product-title">
     <div class="gallery">
       <img id="hero" class="hero" src="assets/omachi-bo-ham.webp" alt="Bao bì Omachi xốt bò hầm 80 g" width="640" height="640" fetchpriority="high">
-      <p class="flavor-label">Chọn vị mì</p>
-      <div class="thumbnails" aria-label="Chọn vị mì Omachi">
-        <button type="button" aria-pressed="true" data-product="beef"><img src="assets/omachi-bo-ham.webp" alt="" width="80" height="80"><span>Xốt bò hầm</span></button>
-        <button type="button" aria-pressed="false" data-product="shrimp"><img src="assets/omachi-tom-chua-cay.webp" alt="" width="80" height="80"><span>Tôm chua cay</span></button>
-        <button type="button" aria-pressed="false" data-product="rib"><img src="assets/omachi-suon-ngu-qua.webp" alt="" width="80" height="80"><span>Sườn hầm ngũ quả</span></button>
+      <p class="flavor-label">Chọn loại mì</p>
+      <div class="thumbnails" aria-label="Chọn loại mì Omachi">
+        <button type="button" aria-pressed="true" data-product="beef"><img src="assets/omachi-bo-ham.webp" alt="" width="80" height="80"><span>Mì gói</span></button>
+        <button type="button" aria-pressed="false" data-product="bowl"><img src="assets/omachi-to.webp" alt="" width="80" height="80"><span>Mì tô</span></button>
+        <button type="button" aria-pressed="false" data-product="cup"><img src="assets/omachi-ly.webp" alt="" width="80" height="80"><span>Mì ly</span></button>
       </div>
     </div>
     <div class="details">
-      <div class="price-banner"><div><span>Giá tham khảo</span><strong id="price">9.000 ₫</strong></div><span class="flavor" id="flavor-badge">XỐT BÒ HẦM</span></div>
+      <div class="price-banner"><div><span>Giá tham khảo</span><strong id="price">9.000 ₫</strong></div><span class="flavor" id="flavor-badge">MÌ GÓI</span></div>
       <div class="product-copy">
         <div class="tag">MÌ KHOAI TÂY</div>
-        <h1 id="product-title">Mì Omachi xốt bò hầm</h1>
+        <h1 id="product-title">Mì gói Omachi xốt bò hầm</h1>
         <p id="product-description">Sợi mì khoai tây và trứng kết hợp cùng xốt bò hầm đậm vị.</p>
         <fieldset>
           <legend>Chọn quy cách</legend>
           <label><input type="radio" name="pack" value="single" checked><span>1 gói</span></label>
           <label><input type="radio" name="pack" value="bundle"><span>Combo 5 gói</span></label>
-          <label><input type="radio" name="pack" value="box"><span>Thùng 30 gói</span></label>
+          <label id="carton-option"><input type="radio" name="pack" value="box"><span>Thùng 30 gói</span></label>
         </fieldset>
         <dl class="facts">
           <div><dt>Hương vị</dt><dd id="product-flavor">Xốt bò hầm</dd></div>
-          <div><dt>Khối lượng mỗi gói</dt><dd id="product-weight">80 g</dd></div>
+          <div><dt>Khối lượng tịnh</dt><dd id="product-weight">80 g</dd></div>
           <div><dt>Cách pha</dt><dd><a href="#cach-pha">Xem hướng dẫn ↓</a></dd></div>
         </dl>
         <p class="note"><a id="product-source" href="https://minhcaumart.vn/san-pham/thuc-pham-che-bien/mi-an-lien/mi-dinh-duong-omachi-xot-bo-ham-80g.html?location=-1">Nguồn ảnh bao bì</a></p>
@@ -48,23 +49,47 @@
     </div>
   </section>
   <nav class="section-nav" aria-label="Thông tin sản phẩm">
-    <a href="#gioi-thieu">Giới thiệu</a><a href="#cach-pha">Cách thưởng thức</a><a href="#hoi-dap">Hỏi đáp</a>
+    <a href="#binh-luan">Bình luận</a><a href="#gioi-thieu">Mô tả chi tiết</a><a href="#cach-pha">Cách pha</a>
   </nav>
-  <section class="panel intro" id="gioi-thieu">
-    <div><h2>Mì khoai tây Omachi</h2><p>Chọn vị mì ở đầu trang để xem thông tin trên từng bao bì. Bạn có thể thêm rau, trứng hoặc món ăn kèm theo ý thích.</p></div>
-    <img src="assets/06.webp" alt="Tô mì với thịt bò, hành lá và ớt" loading="lazy" width="512" height="512">
+  <section class="panel reviews" id="binh-luan" aria-labelledby="reviews-title">
+    <header class="review-heading">
+      <div><h2 id="reviews-title">Bình luận sản phẩm</h2><p id="review-product">Mì gói Omachi xốt bò hầm</p></div>
+      <strong id="review-count">0 bình luận</strong>
+    </header>
+    <div class="review-layout">
+      <div id="review-list" class="review-list"><p>Chưa có bình luận cho sản phẩm này.</p></div>
+      <form id="review-form" class="review-form">
+        <h3>Viết bình luận</h3>
+        <label for="review-name">Tên hiển thị</label>
+        <input id="review-name" name="displayName" maxlength="40" required>
+        <label for="review-text">Bình luận của bạn</label>
+        <textarea id="review-text" name="message" rows="5" maxlength="800" required></textarea>
+        <button class="accent" type="submit">Gửi bình luận</button>
+        <p class="note">Bình luận hiển thị trên trình duyệt này.</p>
+        <p id="review-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+  <section class="panel description" id="gioi-thieu" aria-labelledby="description-title">
+    <h2 id="description-title">Mô tả chi tiết sản phẩm</h2>
+    <h3 id="description-product">Mì gói Omachi xốt bò hầm</h3>
+    <p id="description-body">Sợi mì khoai tây và trứng kết hợp với xốt vị bò hầm. Dạng gói phù hợp khi pha tại nhà và muốn dùng tô riêng, tự chọn rau và món ăn kèm.</p>
+    <h3>Gợi ý thưởng thức</h3>
+    <p id="description-serving">Khi mì chín, khuấy đều để xốt hòa vào nước dùng. Có thể thêm hành lá, ngò gai hoặc vài lát bò đã nấu chín. Để dùng như bữa nhẹ, thêm rau cải chần hoặc một quả trứng luộc.</p>
+    <h3>Bảo quản và thông tin trên nhãn</h3>
+    <p>Giữ bao bì nguyên vẹn ở nơi khô ráo, thoáng mát. Kiểm tra hạn dùng, thành phần và thông tin dị ứng in trên bao bì trước khi pha, đặc biệt khi chọn mua để dùng chung.</p>
   </section>
   <section class="panel" id="cach-pha">
-    <h2>Cách thưởng thức</h2>
-    <ol class="preparation">
-      <li><img src="assets/03.webp" alt="" loading="lazy" width="512" height="512"><strong>Cho mì vào tô</strong><p>Mở gói và đặt vắt mì vào tô.</p></li>
-      <li><img src="assets/04.webp" alt="" loading="lazy" width="512" height="512"><strong>Pha theo hướng dẫn</strong><p>Dùng các gói gia vị, lượng nước và thời gian ghi trên bao bì.</p></li>
-      <li><img src="assets/06.webp" alt="" loading="lazy" width="512" height="512"><strong>Thêm món ăn kèm</strong><p>Thêm hành lá, ớt hoặc thịt bò đã nấu chín.</p></li>
+    <h2>Cách pha và thưởng thức</h2>
+    <ol class="preparation text-steps">
+      <li><strong>Chuẩn bị mì và gia vị</strong><p id="prep-format">Mở gói, cho vắt mì và các gói gia vị vào tô chịu nhiệt theo hướng dẫn trên bao bì.</p></li>
+      <li><strong>Rót nước sôi</strong><p>Dùng lượng nước và thời gian chờ in trên bao bì của loại mì đang chọn.</p></li>
+      <li><strong>Khuấy đều rồi dùng</strong><p>Trộn nhẹ để gia vị tan đều. Cẩn thận khi cầm vật đựng còn nóng.</p></li>
     </ol>
   </section>
   <section class="panel" id="hoi-dap">
     <h2>Hỏi đáp</h2>
-    <details><summary>Có những quy cách nào?</summary><p>Có lựa chọn 1 gói, combo 5 gói và thùng 30 gói trên trang.</p></details>
+    <details><summary>Điểm khác nhau giữa mì gói, mì tô và mì ly?</summary><p>Mì gói cần tô riêng. Mì tô và mì ly sử dụng bao bì làm vật đựng khi pha theo hướng dẫn trên nhãn.</p></details>
     <details><summary>Giá trên trang được tính thế nào?</summary><p>Giá hiển thị là giá minh họa theo quy cách đang chọn.</p></details>
   </section>
   <footer>Omachi · Giá tham khảo</footer>

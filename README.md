@@ -1,6 +1,6 @@
 # LandingPage Omachi
 
-Trang giới thiệu sản phẩm theo bố cục bán hàng TikTok Shop. Có bộ ảnh sản phẩm, chọn quy cách, bảng giá minh họa và giỏ hàng lưu trên thiết bị.
+Trang giới thiệu sản phẩm theo bố cục bán hàng TikTok Shop. Có ba loại mì gói, tô và ly, ảnh bao bì thật, mô tả riêng, giá minh họa và giỏ hàng. Bình luận được lưu bằng localStorage và hiển thị riêng theo từng loại trên trình duyệt đang dùng.
 
 ## Xem trên máy
 
