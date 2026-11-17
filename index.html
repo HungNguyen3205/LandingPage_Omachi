@@ -1,71 +1,81 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#270c10">
-  <meta name="description" content="Theo chân một gói mì Omachi từ lúc mở gói đến tô mì nóng hổi.">
-  <title>Omachi | Từ gói mì đến tô ngon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="story.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Khám phá mì khoai tây Omachi vị bò hầm và chọn quy cách phù hợp.">
+<title>Mì khoai tây Omachi vị bò hầm</title>
+<link rel="stylesheet" href="styles.css">
+<script src="shop.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Omachi, về đầu trang">Omachi<span>.</span></a>
-    <nav aria-label="Điều hướng chính">
-      <a href="#top">Câu chuyện</a>
-      <a class="pill" href="#thuong-thuc">Thưởng thức <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-  <main id="top">
-    <section class="story" aria-label="Từ gói mì đến tô ngon">
-      <div class="stage" aria-hidden="true">
-        <img class="frame is-current" src="assets/01.webp" alt="" fetchpriority="high" width="512" height="512">
-        <img class="frame" src="assets/02.webp" alt="" width="512" height="512">
-        <img class="frame" src="assets/03.webp" alt="" width="512" height="512">
-        <img class="frame" src="assets/04.webp" alt="" width="512" height="512">
-        <img class="frame" src="assets/05.webp" alt="" width="512" height="512">
-        <img class="frame" src="assets/06.webp" alt="" width="512" height="512">
+<header class="top"><div class="bar">
+  <a class="brand" href="#" aria-label="Omachi, về đầu trang">Omachi</a>
+  <button class="cart-link" data-open="cart" type="button">Giỏ hàng <span data-count>0</span></button>
+</div></header>
+<main>
+  <section class="product" aria-labelledby="product-title">
+    <div class="gallery">
+      <img id="hero" class="hero" src="assets/01.webp" alt="Gói mì khoai tây Omachi vị bò hầm" width="512" height="512" fetchpriority="high">
+      <div class="thumbnails" aria-label="Ảnh sản phẩm">
+        <button type="button" aria-label="Gói mì" aria-pressed="true" data-image="01"><img src="assets/01.webp" alt="" width="72" height="72"></button>
+        <button type="button" aria-label="Gói mì đã mở" aria-pressed="false" data-image="02"><img src="assets/02.webp" alt="" width="72" height="72"></button>
+        <button type="button" aria-label="Tô mì hoàn chỉnh" aria-pressed="false" data-image="06"><img src="assets/06.webp" alt="" width="72" height="72"></button>
       </div>
-      <div class="steps">
-        <section class="step" id="goi-mi">
-          <div class="copy">
-            <p class="eyebrow">Mì khoai tây Omachi</p>
-            <h1>Từ gói mì<br><em>đến tô ngon.</em></h1>
-            <p>Một tiếng xé giòn, một làn hơi nóng. Tô mì bạn đang thèm bắt đầu từ đây.</p>
-            <a class="pill primary" href="#mo-goi">Mở gói mì <span aria-hidden="true">↓</span></a>
-          </div>
-        </section>
-        <section class="step" id="mo-goi">
-          <div class="copy"><h2>Xé gói,<br><em>lộ sợi vàng.</em></h2><p>Vắt mì vàng óng hiện ra sau lớp giấy bạc.</p></div>
-        </section>
-        <section class="step" id="vao-to">
-          <div class="copy"><h2>Thả mì<br><em>vào tô.</em></h2><p>Đặt vắt mì vào tô, sẵn sàng đón dòng nước nóng.</p></div>
-        </section>
-        <section class="step" id="rot-nuoc">
-          <div class="copy"><h2>Rót nước,<br><em>hơi khẽ bay.</em></h2><p>Từng sợi mì mềm dần trong làn hơi ấm.</p></div>
-        </section>
-        <section class="step" id="gia-vi">
-          <div class="copy"><h2>Thêm gia vị,<br><em>dậy hương.</em></h2><p>Sốt hòa vào nước dùng, phủ một màu nâu óng.</p></div>
-        </section>
-        <section class="step" id="to-mi">
-          <div class="copy"><h2>Gắp một đũa,<br><em>ngon ngay.</em></h2><p>Thêm vài lát bò, chút hành và ớt để có tô mì đúng vị bạn thích.</p><a class="pill primary" href="#thuong-thuc">Xem cách thưởng thức <span aria-hidden="true">↓</span></a></div>
-        </section>
+    </div>
+    <div class="details">
+      <div class="price-banner"><div><span>Giá tham khảo</span><strong id="price">9.000 ₫</strong></div><span class="flavor">BÒ HẦM</span></div>
+      <div class="product-copy">
+        <div class="tag">MÌ KHOAI TÂY</div>
+        <h1 id="product-title">Mì Omachi vị bò hầm</h1>
+        <p>Sợi mì vàng óng, nước dùng đậm vị bò hầm. Thêm chút hành lá và vài lát ớt để tô mì tròn vị.</p>
+        <fieldset>
+          <legend>Chọn quy cách</legend>
+          <label><input type="radio" name="pack" value="single" checked><span>1 gói</span></label>
+          <label><input type="radio" name="pack" value="bundle"><span>Combo 5 gói</span></label>
+          <label><input type="radio" name="pack" value="box"><span>Thùng 30 gói</span></label>
+        </fieldset>
+        <dl class="facts">
+          <div><dt>Hương vị</dt><dd>Bò hầm</dd></div>
+          <div><dt>Cách pha</dt><dd><a href="#cach-pha">Xem hướng dẫn ↓</a></dd></div>
+        </dl>
       </div>
-    </section>
-    <section class="serving" id="thuong-thuc" aria-labelledby="serving-title">
-      <img src="assets/06.webp" alt="Tô mì nóng với thịt bò, hành lá và ớt" loading="lazy" width="512" height="512">
-      <div>
-        <p class="eyebrow">Gợi ý thưởng thức</p>
-        <h2 id="serving-title">Tô Omachi <em>của bạn.</em></h2>
-        <p>Pha mì theo hướng dẫn trên bao bì. Khi mì chín, thêm hành lá, ớt và thịt bò đã nấu chín nếu thích.</p>
-        <a class="pill primary" href="#top">Xem lại từ đầu <span aria-hidden="true">↑</span></a>
-      </div>
-    </section>
-  </main>
-  <footer><span class="brand">Omachi<span>.</span></span><small>Trang giới thiệu sản phẩm · Hình ảnh minh họa</small></footer>
+    </div>
+  </section>
+  <nav class="section-nav" aria-label="Thông tin sản phẩm">
+    <a href="#gioi-thieu">Giới thiệu</a><a href="#cach-pha">Cách thưởng thức</a><a href="#hoi-dap">Hỏi đáp</a>
+  </nav>
+  <section class="panel intro" id="gioi-thieu">
+    <div><h2>Đậm vị bò hầm</h2><p>Mì khoai tây Omachi kết hợp với nước dùng vị bò hầm. Bạn có thể thêm rau, thịt bò đã nấu chín hoặc trứng để có tô mì theo ý thích.</p></div>
+    <img src="assets/06.webp" alt="Tô mì với thịt bò, hành lá và ớt" loading="lazy" width="512" height="512">
+  </section>
+  <section class="panel" id="cach-pha">
+    <h2>Cách thưởng thức</h2>
+    <ol class="preparation">
+      <li><img src="assets/03.webp" alt="" loading="lazy" width="512" height="512"><strong>Cho mì vào tô</strong><p>Mở gói và đặt vắt mì vào tô.</p></li>
+      <li><img src="assets/04.webp" alt="" loading="lazy" width="512" height="512"><strong>Pha theo hướng dẫn</strong><p>Dùng các gói gia vị, lượng nước và thời gian ghi trên bao bì.</p></li>
+      <li><img src="assets/06.webp" alt="" loading="lazy" width="512" height="512"><strong>Thêm món ăn kèm</strong><p>Thêm hành lá, ớt hoặc thịt bò đã nấu chín.</p></li>
+    </ol>
+  </section>
+  <section class="panel" id="hoi-dap">
+    <h2>Hỏi đáp</h2>
+    <details><summary>Có những quy cách nào?</summary><p>Có lựa chọn 1 gói, combo 5 gói và thùng 30 gói trên trang.</p></details>
+    <details><summary>Giá trên trang được tính thế nào?</summary><p>Giá hiển thị là giá minh họa theo quy cách đang chọn.</p></details>
+  </section>
+  <footer>Omachi · Hình ảnh và giá minh họa</footer>
+</main>
+<div class="purchase"><div class="bar">
+  <div class="purchase-price"><small>Giá tham khảo</small><strong id="bar-price">9.000 ₫</strong></div>
+  <button type="button" id="add" class="outline">Thêm vào giỏ</button>
+  <button type="button" id="buy" class="accent">Mua ngay</button>
+</div></div>
+<p role="status" class="toast" id="feedback"></p>
+<dialog id="order" aria-labelledby="dialog-title">
+  <div class="dialog-header"><h2 id="dialog-title">Giỏ hàng</h2><form method="dialog"><button class="close" aria-label="Đóng" type="submit">×</button></form></div>
+  <div id="cart-items"></div>
+  <div class="total"><span>Tạm tính</span><strong id="total"></strong></div>
+  <p class="note">Giỏ hàng lưu trên thiết bị. Thanh toán online sẽ khả dụng khi cửa hàng kết nối hệ thống đặt hàng.</p>
+</dialog>
 </body>
 </html>
